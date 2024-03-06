@@ -1,0 +1,15 @@
+name: Dev Workflow - Test and check thing
+on:
+  push:
+    branches:
+      - chore/githubactiontest
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS output before checkout
+        run: ls
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: LS output after checkout
+        run: ls    
